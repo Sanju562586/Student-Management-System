@@ -44,13 +44,15 @@ function AppContent() {
       {user && <Navbar user={user} />}
       <br/>
       <br/>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={user ? <Home /> : <Login />} />
-        <Route path="/list-students" element={user ? <StudentList /> : <Login />} />
-        <Route path="/add-student" element={user ? <AddStudent /> : <Login />} />
-        <Route path="/edit-student" element={user ? <EditStudentForm /> : <Login />} />
-      </Routes>
+      <div className="main-content">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={user ? <Home /> : <Login />} />
+          <Route path="/list-students" element={user ? <StudentList /> : <Login />} />
+          <Route path="/add-student" element={user ? <AddStudent /> : <Login />} />
+          <Route path="/edit-student" element={user ? <EditStudentForm /> : <Login />} />
+        </Routes>
+      </div>
     </>
   );
 }

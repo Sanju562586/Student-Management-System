@@ -1,47 +1,58 @@
-/* Loading state */
+/* Completely New Loading State */
 .loading-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-  }
-  
-  .loading-container p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #6f42c1;
-    font-weight: bold;
-  }
-  
-  /* Error state */
-  .error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-  }
-  
-  .error-message {
-    background-color: #ffcccc;
-    color: #e74c3c;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .error-message i {
-    font-size: 24px;
-    color: #e74c3c;
-  }
-  
-  .error-message p {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #d3cce3, #e9e4f0);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.loading-container p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #6a1b9a;
+  font-weight: 700;
+}
+
+/* Completely New Error State */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffe6e6;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideDown 1s ease-in-out;
+}
+
+.error-message {
+  background: #fff;
+  border: 2px dashed #d32f2f;
+  color: #b71c1c;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.error-message i {
+  font-size: 40px;
+  color: #b71c1c;
+}
+
+.error-message p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

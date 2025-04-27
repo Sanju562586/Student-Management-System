@@ -1,21 +1,89 @@
-body {
-    background-color: #f4f6f9;
-  }
-  
-  .jumbotron {
-    background: linear-gradient(135deg, #6f42c1, #007bff);
-  }
-  
-  .jumbotron h1 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-  }
-  
-  .jumbotron p {
-    font-size: 1.2rem;
-  }
-  
-  .navbar {
-    border-bottom: 2px solid #007bff;
-  }
-  
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #2196f3, #21cbf3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.sidebar-header {
+  margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active-link {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.sidebar-user {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sidebar-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.sidebar-user-info {
+  color: #fff;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.sidebar-logout {
+  margin-top: 10px;
+  background: #f44336;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar-logout:hover {
+  background: #d32f2f;
+}
+
+/* Shift the main page content */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+}
