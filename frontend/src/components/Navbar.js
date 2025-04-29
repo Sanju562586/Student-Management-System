@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { auth } from '../firebaseConfig';
+// import { auth } from '../firebaseConfig';
 import '../styles.css';
  // (Make sure styles.css contains sidebar styles)
 
@@ -9,9 +9,9 @@ function Navbar({ user }) {
 
   const handleLogout = async () => {
     try {
-      await auth.signOut();
-      localStorage.clear();
-      sessionStorage.clear();
+      // await auth.signOut();
+      // localStorage.clear();
+      // sessionStorage.clear();
       navigate('/login');
     } catch (error) {
       console.error('Error during logout:', error);
